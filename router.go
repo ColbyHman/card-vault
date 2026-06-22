@@ -23,6 +23,8 @@ func initServer() *chi.Mux {
 
 		r.Route("/{id}", func(r chi.Router) {
 			r.Get("/", getCard)
+			r.Patch("/", modifyCard)
+			r.Delete("/", deleteCard)
 		})
 	})
 
